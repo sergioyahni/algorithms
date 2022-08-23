@@ -5,11 +5,11 @@ import re
 import sys
 
 
-#
-# Complete the 'miniMaxSum' function below.
+# Given five positive integers, find the minimum and maximum values that can be
+# calculated by summing exactly four of the five integers.
 #
 # The function accepts INTEGER_ARRAY arr as parameter.
-#
+
 
 def miniMaxSum(arr):
     # create a list of possible combinations
@@ -39,6 +39,6 @@ def miniMaxSum(arr):
 
 
 if __name__ == '__main__':
-    arr = [1, 2, 3, 4, 5]
+    new_arr = [1, 2, 3, 4, 5]
 
-    miniMaxSum(arr)
+    miniMaxSum(new_arr)
