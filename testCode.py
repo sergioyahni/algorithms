@@ -1,20 +1,52 @@
-def countApplesAndOranges(s, t, a, b, apples, oranges):
+def pageCount(n, p):
     # Write your code here
 
-    apples_counter = [1 if s <= a + apple <= t else 0 for apple in apples]
-    print(sum(apples_counter))
+    res_ftl, res_ltf = int(), int()
 
-    oranges_counter = [1 if t >= (b + orange) >= s else 0 for orange in oranges]
-    print(sum(oranges_counter))
+    pcounter, pl, pr = 0, 0, 1
+    c = False
+
+    while not c and pl < n:
+        if pl == p or pr == p:
+            res_ftl = pcounter
+            c = True
+        else:
+            pcounter += 1
+            pl += 2
+            pr += 2
+
+    pcounter1 = 0
+
+    if n % 2 == 0:
+        pl1, pr1 = n, n + 1
+    else:
+        pl1, pr1 = n - 1, n
+
+    c1 = False
+    while not c1 and pl > 0:
+
+        if pl1 == p or pr1 == p:
+            res_ltf = pcounter1
+            c1 = True
+        else:
+            pl1 -= 2
+            pr1 -= 2
+        pcounter1 += 1
+
+    # print(res_ftl, res_ltf)
+    if res_ftl > res_ltf:
+        return res_ltf
+    else:
+        return res_ftl
 
 
 if __name__ == '__main__':
-    s = 2
-    t = 3
-    a = 1
-    b = 5
+    n = 6
+    p = 5
 
-    apples = [2]
-    oranges = [-2]
+    # n = 5
+    # p = 4
 
-    countApplesAndOranges(s, t, a, b, apples, oranges)
+    result = pageCount(n, p)
+
+    print(result)

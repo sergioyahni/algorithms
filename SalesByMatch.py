@@ -7,7 +7,15 @@ import re
 import sys
 
 #
-# Complete the 'sockMerchant' function below.
+# There is a large pile of socks that must be paired by color. Given an array of integers representing the color of
+# each sock, determine how many pairs of socks with matching colors there are.
+#
+# Complete the sockMerchant function in the editor below.
+#
+# sockMerchant has the following parameter(s):
+#
+# int n: the number of socks in the pile
+# int ar[n]: the colors of each sock
 #
 # The function is expected to return an INTEGER.
 # The function accepts following parameters:

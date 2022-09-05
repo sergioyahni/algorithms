@@ -7,7 +7,8 @@ import re
 import sys
 
 #
-# Complete the 'divisibleSumPairs' function below.
+# Given an array of integers and a positive integer k, determine the number of (i,j) pairs where i<j and  ar[i] + ar[j]
+# is divisible by k.
 #
 # The function is expected to return an INTEGER.
 # The function accepts following parameters:
@@ -18,8 +19,6 @@ import sys
 
 def divisibleSumPairs(n, k, ar):
     # Write your code here
-    print(f"n = {n}\nk = {k}\nar = {ar}")
-
     subarrays = list()
     i = 0
     while i < n:
@@ -30,13 +29,9 @@ def divisibleSumPairs(n, k, ar):
     return len(subarrays)
 
 if __name__ == '__main__':
+    n = 6
+    k = 3
 
-    first_multiple_input = input().rstrip().split()
-
-    n = int(first_multiple_input[0])
-
-    k = int(first_multiple_input[1])
-
-    ar = list(map(int, input().rstrip().split()))
+    ar = [1, 3, 2, 6, 1, 2]
 
     result = divisibleSumPairs(n, k, ar)
