@@ -21,13 +21,7 @@ import sys
 #
 
 def climbingLeaderboard(ranked, player):
-    # Write your code here
-    rank = []
-    for game in player:
-        rank.append(sorted(list(set(ranked[:] + [game])), reverse=True).index(game) + 1)
-    return rank
-
-    # rank = [sorted(list(set(ranked[:] + [game])), reverse=True).index(game) + 1) for game in player]
+    return [sorted(list(set(ranked[:] + [game])), reverse=True).index(game) + 1 for game in player]
 
 
 if __name__ == '__main__':
