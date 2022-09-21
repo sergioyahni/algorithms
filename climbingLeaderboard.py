@@ -6,6 +6,7 @@ import random
 import re
 import sys
 
+
 #
 # Complete the 'climbingLeaderboard' function below. An arcade game player wants to climb to the top of the
 # leaderboard and track their ranking. The game uses Dense Ranking, so its leaderboard works like this:
@@ -20,8 +21,8 @@ import sys
 #
 
 def climbingLeaderboard(ranked, player):
-    # Write your code here
-    pass
+    return [sorted(list(set(ranked[:] + [game])), reverse=True).index(game) + 1 for game in player]
+
 
 if __name__ == '__main__':
     ranked = [100, 100, 50, 40, 40, 20, 10]
