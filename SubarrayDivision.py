@@ -6,6 +6,7 @@ import random
 import re
 import sys
 
+
 #
 # Two children, Lily and Ron, want to share a chocolate bar. Each of the squares has an integer on it.
 #
@@ -31,13 +32,13 @@ def birthday(s, d, m):
         if n + m > len(s):
             status = False
         else:
-            if sum(s[n:n+m]) == d:
-                subarrays.append(s[n:n+m])
+            if sum(s[n:n + m]) == d:
+                subarrays.append(s[n:n + m])
         n += 1
     return len(subarrays)
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     n = int(input().strip())
 
     s = list(map(int, input().rstrip().split()))
